@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_05_30_155325) do
     t.datetime "completed_at"
     t.integer "task_id"
     t.integer "cat_id"
+    t.index ["cat_id", "scheduled_at"], name: "index_schedules_on_cat_id_and_scheduled_at"
     t.index ["cat_id"], name: "index_schedules_on_cat_id"
     t.index ["task_id"], name: "index_schedules_on_task_id"
   end

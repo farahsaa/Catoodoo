@@ -1,4 +1,4 @@
-class DescribeRelationships < ActiveRecord::Migration[6.0]
+class LinkScheduleToTaskAndCat < ActiveRecord::Migration[6.0]
   def change
     change_table :schedules do |table|
       table.belongs_to :task

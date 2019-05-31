@@ -37,4 +37,9 @@ RSpec.describe Cat, type: :model do
       expect(cat.tasks.pluck(:id)).to eq(tasks.map(&:id))
     end
   end
+
+  it "can be created from the factory" do 
+    cat = create(:cat)
+    expect(cat).to be_persisted
+  end
 end

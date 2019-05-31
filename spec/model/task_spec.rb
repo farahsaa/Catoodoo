@@ -14,4 +14,9 @@ RSpec.describe Task, type: :model do
     expect(task).to be_persisted
     expect(task.title).to eq("Drink milk")
   end 
+
+  it "can be created from the factory" do 
+    task = create(:task)
+    expect(task).to be_persisted
+  end
 end

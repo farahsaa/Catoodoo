@@ -27,13 +27,14 @@ RSpec.describe Cat, type: :model do
     expect(cat.tasks.count).to eq(0)
 
     tasks = [ ] 
-
-    tasks << Task.create(title: "Kill mouse")
-    cat.tasks << tasks.last
-    expect(cat.tasks.pluck(:id)).to eq(tasks.map(&:id))
-
-    tasks << Task.create(title: "Drink milk")
-    cat.tasks << tasks.last
-    expect(cat.tasks.pluck(:id)).to eq(tasks.map(&:id))
+    [
+      "Kill mouse",
+      "Drink milk",
+      "Have nap"
+    ].each do |title| 
+      tasks << Task.create(title: title)
+      cat.tasks << tasks.last
+      expect(cat.tasks.pluck(:id)).to eq(tasks.map(&:id))
+    end
   end
 end

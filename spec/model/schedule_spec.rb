@@ -19,6 +19,11 @@ RSpec.describe Schedule, type: :model do
     expect(schedule.errors.messages[:cat]).to eq(["must exist", "can't be blank"])
 
   end
+  
+  it "can be created from the factory" do 
+    schedule = create(:schedule)
+    expect(schedule).to be_persisted
+  end
 end
 
 

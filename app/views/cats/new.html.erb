@@ -1,0 +1,4 @@
+<%= form_for(@cat, url: cats_path, method: :post) do |form|%>
+  <%= render(partial: "form", object: form) %>
+  <%= form.submit %>
+<%end%> 

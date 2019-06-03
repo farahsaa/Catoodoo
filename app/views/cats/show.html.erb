@@ -1,0 +1,14 @@
+<%= link_to("edit", edit_cat_path(@cat)) %>
+<%= link_to("delete", cat_path(@cat), method: :delete, data: {confirm: "are you sure you want to delete?"}) %>
+
+
+<table>
+  <tr>
+    <th>
+      Name
+    </th>
+    <td>
+      <%= @cat.name %>
+    </td>
+  </tr>
+</table>

@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :schedules, only: [:new, :create, :show, :destroy]
   resources :tasks, only: [:index, :show]
   
-  root to: "home#index"
+  root to: "cats#index"
 end

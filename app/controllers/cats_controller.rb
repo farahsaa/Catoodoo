@@ -33,8 +33,10 @@ class CatsController < ApplicationController
   end
 
   def destroy
-    @cat.destroy
+    @cat.destroy!
     redirect_to cats_path
+  rescue ActiveRecord::RecordInvalid
+    render(plain: "Nope! Blugh!")
   end
 
 protected 

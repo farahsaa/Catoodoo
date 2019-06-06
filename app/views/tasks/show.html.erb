@@ -13,7 +13,11 @@
   <% @schedules.each do |schedule| %>
     <tr>
       <td>
-        <%= link_to(schedule.cat.name, cat_path(schedule.cat)) %>
+        <% if schedule.cat %> 
+          <%= link_to(schedule.cat.name, cat_path(schedule.cat)) %>
+        <% else %>
+          (deleted cat)
+        <% end %>
       </td>
       <td>
         <%= schedule.scheduled_at %>

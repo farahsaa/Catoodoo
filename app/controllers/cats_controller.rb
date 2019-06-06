@@ -20,7 +20,7 @@ class CatsController < ApplicationController
   end
 
   def show
-    @schedules = @cat.schedules.all
+    @schedules = @cat.schedules.order(:scheduled_at).all
   end
   
   def edit

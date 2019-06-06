@@ -32,7 +32,7 @@ class SchedulesController < ApplicationController
 
   def destroy
     @schedule.destroy
-    redirect_to schedule_path
+    redirect_to cat_path(@schedule.cat)
   end
 
   protected 
@@ -48,6 +48,8 @@ class SchedulesController < ApplicationController
   end 
 
   def schedule_params
-    params.fetch(:schedule, { }).permit(:cat_id, :task_id)
+    params.fetch(:schedule, { }).permit(:cat_id, :task_id, :scheduled_at).tap do |params|
+      params[:scheduled_at] &&= Time.at(params[:scheduled_at].to_i)
+    end
   end
 end

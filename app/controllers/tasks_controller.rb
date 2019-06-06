@@ -7,7 +7,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    @schedules = @task.schedules.all
+    @schedules = @task.schedules.order(:scheduled_at).all
   end
 
 protected 

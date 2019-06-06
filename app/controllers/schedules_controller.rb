@@ -35,6 +35,18 @@ class SchedulesController < ApplicationController
     redirect_to cat_path(@schedule.cat)
   end
 
+  def mark_complete
+    @schedule.completed_at = Time.now
+    @schedule.save 
+    redirect_to schedule_path(@schedule)
+  end
+
+  def mark_incomplete
+    @schedule.completed_at = nil
+    @schedule.save 
+    redirect_to schedule_path(@schedule)
+  end
+
   protected 
   def load_schedule
     @schedule = Schedule.find(params[:id])

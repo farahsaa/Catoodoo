@@ -1,4 +1,9 @@
 <%= link_to("delete", schedule_path(@schedule), method: :delete, data: {confirm: "are you sure you want to delete?"}) %>
+<% if (@schedule.completed_at) %>
+  <%= link_to("mark as incomplete", mark_incomplete_schedule_path(@schedule), method: :post, data: {confirm: "was this task completed?"}) %>
+<% else %>
+  <%= link_to("mark as complete", mark_complete_schedule_path(@schedule), method: :post, data: {confirm: "was this task completed?"}) %>
+<% end %>
 
 <table>
   <tr>
@@ -20,12 +25,21 @@
   </tr>
 
   <tr>
-  <th>
-    Scheduled at 
-  </th>
-  <td>
-    <%= @schedule.scheduled_at %>
-  </td>
-</tr>
+    <th>
+      Scheduled at 
+    </th>
+    <td>
+      <%= @schedule.scheduled_at %>
+    </td>
+  </tr>
+
+  <tr>
+    <th>
+      Completed at
+    </th>
+    <td>
+      <%= @schedule.completed_at || 'not completed' %>
+    </td>
+  </tr>
 
 </table>

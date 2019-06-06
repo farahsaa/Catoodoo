@@ -1,5 +1,6 @@
 <%= link_to("edit", edit_cat_path(@cat)) %>
 <%= link_to("delete", cat_path(@cat), method: :delete, data: {confirm: "are you sure you want to delete?"}) %>
+<%= link_to("addtask", new_schedule_path(cat_id: @cat)) %>
 
 <table>
   <tr>
@@ -10,4 +11,17 @@
       <%= @cat.name %>
     </td>
   </tr>
+</table>
+
+<table>
+  <% @schedules.each do |schedule| %>
+    <tr>
+      <td>
+        <%= link_to(schedule.task.title, schedule_path(schedule)) %>
+      </td>
+      <td>
+        <%= schedule.scheduled_at %>
+      </td>
+    </tr>
+  <% end %>
 </table>

@@ -1,0 +1,2 @@
+<%= form.hidden_field(:cat_id)%>
+<%= form.select(:task_id, options_for_select(@tasks.map{|t| [t.title, t.id]}))%>

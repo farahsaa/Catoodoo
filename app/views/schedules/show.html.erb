@@ -1,0 +1,22 @@
+<%= link_to("delete", schedule_path(@schedule), method: :delete, data: {confirm: "are you sure you want to delete?"}) %>
+
+<table>
+  <tr>
+    <th>
+      Cat
+    </th>
+    <td>
+      <%= link_to(@schedule.cat.name, cat_path(@schedule.cat)) %>
+    </td>
+  </tr>
+
+  <tr>
+    <th>
+      Task
+    </th>
+    <td>
+      <%= link_to(@schedule.task.title, task_path(@schedule.task)) %>
+    </td>
+  </tr>
+
+</table>

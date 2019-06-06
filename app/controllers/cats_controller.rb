@@ -20,6 +20,7 @@ class CatsController < ApplicationController
   end
 
   def show
+    @schedules = @cat.schedules.all
   end
   
   def edit

@@ -1,0 +1,4 @@
+<%= form_for(@schedule, url: schedules_path, method: :post) do |form|%>
+  <%= render(partial: "form", object: form) %>
+  <%= form.submit %>
+<%end%> 

@@ -1,8 +1,8 @@
-<%= link_to("delete", schedule_path(@schedule), method: :delete, data: {confirm: "are you sure you want to delete?"}) %>
+<%= link_to("delete", schedule_path(@schedule), method: :delete, data: {confirm: "are you sure you want to delete?"}, class: "btn btn-primary") %>
 <% if (@schedule.completed_at) %>
-  <%= link_to("mark as incomplete", mark_incomplete_schedule_path(@schedule), method: :post, data: {confirm: "was this task completed?"}) %>
+  <%= link_to("mark as incomplete", mark_incomplete_schedule_path(@schedule), method: :post, data: {confirm: "was this task completed?"}, class: "btn btn-primary") %>
 <% else %>
-  <%= link_to("mark as complete", mark_complete_schedule_path(@schedule), method: :post, data: {confirm: "was this task completed?"}) %>
+  <%= link_to("mark as complete", mark_complete_schedule_path(@schedule), method: :post, data: {confirm: "was this task completed?"}, class: "btn btn-primary") %>
 <% end %>
 
 <table>

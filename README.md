@@ -6,25 +6,23 @@ Cattodoo is cat to do list which allows users to manage multiple cats and assign
 
 Different libraries such as Webpacker, Jquery and Bootstrap were utilized in this project. 
 
-###Screenshots 
+### Screenshots 
 
-![Catodoo](file:///Users/sarafarah/Desktop/Screen%20Shot%202019-08-19%20at%2011.23.40%20AM.png)
+![Catodoo](todolist/Screen Shot 2019-08-19 at 11.23.40 AM.png)
 
-![Catodoo](file:///Users/sarafarah/Desktop/Screen%20Shot%202019-08-19%20at%2011.23.47%20AM.png)
-
-
+![Catodoo](todolist/Screen Shot 2019-08-19 at 11.23.40 AM.png)
 
 
-##Installation
+### Installation
 
 Update the yarn bundle by running: 
 
-###yarn install
+## yarn install
 
 
 To run the server: 
 
-####rails s
+## rails s
 
 open http://localhost:3000
 

@@ -4,7 +4,7 @@ Cattodoo is cat to do list which allows users to manage multiple cats and assign
 
 Install the dependencies and start the server.
 
-npm install
+## npm install
 
 npm start
 

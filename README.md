@@ -12,5 +12,5 @@ open http://localhost:3000
 
 Dependencies
 
-React
-webpack-dev-server
+### React
+### webpack-dev-server

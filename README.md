@@ -8,9 +8,9 @@ Different libraries such as Webpacker, Jquery and Bootstrap were utilized in thi
 
 ### Screenshots 
 
-![Catodoo](todolist/Screen Shot 2019-08-19 at 11.23.40 AM.png)
+![Catodoo](./todolist/Screen Shot 2019-08-19 at 11.23.40 AM.png)
 
-![Catodoo](todolist/Screen Shot 2019-08-19 at 11.23.40 AM.png)
+![Catodoo](./todolist/Screen Shot 2019-08-19 at 11.23.40 AM.png)
 
 
 ### Installation

@@ -1,9 +1,13 @@
-<%= link_to("newcat", new_cat_path, class: "btn btn-primary") %>
+<%= link_to("newcat", new_cat_path, class: "btn btn-primary float-right") %>
 
 <table class="table">
+  <div class="container">
+      <h1>ABOUT THE CATS</h1>
+      <p>ALL THE CATS</p>
+  </div>
   <thead>
     <tr>
-      <th scope="col">Name</th>
+      <th scope="col">Name </th>
     </tr>
   </thead>
   <% @cats.each do |cat| %>
@@ -14,3 +18,6 @@
     </tr>
   <% end %>
 </table>
+
+
+

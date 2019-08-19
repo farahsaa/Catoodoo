@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Cattodoo is cat to do list which allows users to manage multiple cats and assign them tasks. 
 
 Things you may want to cover:
 
